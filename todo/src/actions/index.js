@@ -1,5 +1,5 @@
 export const ADD_TODO = "ADD_TODO";
-export const TOGGLE_TODO = "TOGGLE_TODO";
+export const TOGGLE_COMPLETED = "TOGGLE_COMPLETED";
 
 export const addTodo = newTodo => {
   return {
@@ -9,9 +9,9 @@ export const addTodo = newTodo => {
 };
 
 //toggleTodo requires an index to determine which todo item will be toggled
-export const toggleTodo = index => {
+export const toggleCompleted = index => {
   return {
-    type: TOGGLE_TODO,
+    type: TOGGLE_COMPLETED,
     payload: index
   };
 };

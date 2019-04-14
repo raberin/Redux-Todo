@@ -1,4 +1,4 @@
-import { ADD_TODO, TOGGLE_TODO } from "../actions";
+import { ADD_TODO, TOGGLE_COMPLETED } from "../actions";
 
 const initialState = {
   todos: []
@@ -15,10 +15,17 @@ const todosReducer = (state = initialState, action) => {
         //Using spread operator i can pass down everything originally
         //in the state
         ...state,
-        friends: [...state.friends, newTodo]
+        todos: [...state.todos, newTodo]
       };
-    // case TOGGLE_TODO:
-    //   return state;
+    case TOGGLE_COMPLETED:
+      return {
+        ...state,
+        todos: state.todos.map((todo, index) =>
+          action.payload === index
+            ? { ...todo, completed: !todo.completed }
+            : todo
+        )
+      };
     default:
       return state;
   }

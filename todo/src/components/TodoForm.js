@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import { addTodo } from "../actions";
 
 class TodoForm extends React.Component {
   state = {
@@ -17,6 +18,7 @@ class TodoForm extends React.Component {
     e.preventDefault();
     //This accesses redux stores, addTodo action/reducer and runs it to add a todo
     this.props.addTodo(this.state.newTodo);
+    this.setState({ newTodo: "" });
   };
 
   render() {
@@ -33,3 +35,8 @@ class TodoForm extends React.Component {
     );
   }
 }
+
+export default connect(
+  null,
+  { addTodo }
+)(TodoForm);
