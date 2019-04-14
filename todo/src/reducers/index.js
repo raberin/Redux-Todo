@@ -1,3 +1,5 @@
+import { ADD_TODO, TOGGLE_TODO } from "../actions";
+
 const initialState = {
   todos: []
 };
@@ -21,3 +23,5 @@ const todosReducer = (state = initialState, action) => {
       return state;
   }
 };
+
+export default todosReducer;
