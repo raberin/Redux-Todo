@@ -3,11 +3,11 @@ import { connect } from "react-redux";
 
 const TodoList = () => {
   return (
-    <ul>
+    <div>
       {this.props.todos.map((todo, index) => (
-        <Todo />
+        <Todo id={props.id} key={props.id} />
       ))}
-    </ul>
+    </div>
   );
 };
 
