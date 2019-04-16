@@ -1,0 +1,10 @@
+.todo-form {
+  margin-top: 2%;
+}
+
+.add-todo-button {
+  border: solid 1px #ffd563;
+  background: linear-gradient(#5c66c4, #ffd563);
+  margin-left: 2%;
+  color: white;
+}
