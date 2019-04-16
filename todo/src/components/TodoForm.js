@@ -2,6 +2,8 @@ import React from "react";
 import { connect } from "react-redux";
 import { addTodo } from "../actions";
 
+import "./TodoForm.css";
+
 class TodoForm extends React.Component {
   state = {
     newTodo: ""
@@ -23,14 +25,14 @@ class TodoForm extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.addTodoHandler}>
+      <form className="todo-form" onSubmit={this.addTodoHandler}>
         <input
           type="text"
           value={this.state.newTodo}
           placeholder="Add Todo"
           onChange={this.changeHandler}
         />
-        <button>Add Todo</button>
+        <button className="add-todo-button">Add Todo</button>
       </form>
     );
   }

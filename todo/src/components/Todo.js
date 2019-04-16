@@ -2,6 +2,8 @@ import React from "react";
 import { connect } from "react-redux";
 import { toggleCompleted } from "../actions";
 
+import "./TodoList.css";
+
 const Todo = props => {
   const toggleCompleted = (e, index) => {
     console.log(index);
@@ -11,6 +13,7 @@ const Todo = props => {
 
   return (
     <li
+      className="todo"
       key={props.todo.id}
       index={props.todo.id}
       onClick={e => toggleCompleted(e, props.id)}

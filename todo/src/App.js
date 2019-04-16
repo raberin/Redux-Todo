@@ -7,8 +7,9 @@ import TodoForm from "./components/TodoForm";
 const App = () => {
   return (
     <div className="App">
-      <TodoList />
+      <h1>Roenz's Todo List</h1>
       <TodoForm />
+      <TodoList />
     </div>
   );
 };
